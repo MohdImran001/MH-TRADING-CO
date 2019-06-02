@@ -1,0 +1,125 @@
+/*#f5f5f5 grey*/
+body{
+    background-color:#f5f5f5; 
+}
+.active{
+    color: red;
+    font-weight: bold;
+}
+.navbar-default {
+    background-color: white;
+    padding: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 0px;
+}
+.navbar-default .navbar-brand {
+    color: red;
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+
+}
+.navbar-default .navbar-brand:hover{
+  color: red;
+    
+}
+.navbar-default .navbar-brand:active{
+  color: red;
+    
+}
+
+.navbar-default .navbar-right li a {
+    font-size: 18px;
+}
+
+#welcome {
+    
+    font-family: 'Josefin Sans',sans-serif;
+    font-size: 22px;
+    border: 0px;
+    border-radius: 2px;
+    border: 2px solid #eee;
+}
+#wel_mh {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    background-color: red;
+
+}
+#con_mh {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+  
+
+}
+#wel_body{
+    line-height: 35px;
+}
+
+#dlr_splr{
+    border: 0px;
+    border-radius: 2px;
+    font-size: 17px;
+    font-family: 'Josefin Sans',sans-serif;
+    font-weight: bold;
+    border: 2px solid #eee;
+    
+}
+
+#footer {
+    text-align: center;
+    background: white;
+    position: relative;
+    width: 100%;
+    
+    bottom: 0;
+    height: 50px;
+    margin-top: 20px;
+}
+#footer p { 
+    position: relative;
+    top: 30%;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: large;
+    font-weight: bolder;
+    color: black;
+}
+
+.img-responsive {
+    width: auto;
+    max-width: 100%;
+}
+
+#signin {
+     box-shadow: 2px 2px 5px #eee;
+    color: red;
+    font-weight: bolder;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    background: white;
+}
+
+#message {
+    display: none;
+}
+
+#submit {
+    box-shadow: 2px 2px 5px #eee;
+    color: red;
+    font-weight: bolder;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    background: white;
+}
+
+#signout {
+      box-shadow: 2px 2px 5px #eee;
+    color: red;
+    font-weight: bolder;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    background: white;
+}
+
