@@ -1,0 +1,105 @@
+
+
+    <div class="panel panel-primary" id="welcome">
+        
+        <div class="panel-heading " id="con_mh">Want to enquire about something???</div>
+        
+        <div class="panel-body" id="wel_body">
+           <div class="container text-center">
+                <form name="ContactForm" action="https://formspree.io/mhtradingco@yahoo.com" method="POST" id="enquiry_form">
+                    <p class="error" id="error">Error</p>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <input type="text" placeholder="Enter your name" name="name" id="name__input">
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" placeholder="Enter your phone" name="phone" id="phone__input">
+                        </div>  
+                    </div>
+                    <input type="text" placeholder="Enter your email" name="email" id="email__input" style="margin-top: 10px;">
+                    <textarea placeholder="Type your query...." name="message" id="message__input"></textarea>
+                    <button id="submit_button" style="margin-top: 10px;">SEND</button>
+                </form>
+                <script>
+                    function validateEmail(email) {
+                        const regex = /\S+@\S+\.\S+/;
+                        return regex.test(email);
+                    }
+
+                    function validatePhone(phone) {
+                        const regex = /\d+$/;
+                        if(phone.length !== 10)
+                            return false;
+                        return regex.test(phone);
+                    }
+
+                    function validateMessage(msg) {
+                        var count = (msg.split(" ").length - 1);
+                        //console.log(count);
+                        if(count > 101)
+                            return false;
+                        return true;
+                    }
+
+                    function submitForm(isValid) {
+                        if(isValid) {
+                            console.log(document.ContactForm)
+                            document.ContactForm.submit();
+                        }
+                    }
+
+                    const nameInput = document.querySelector('#name__input');
+                    const emailInput = document.querySelector('#email__input');
+                    const messageInput = document.querySelector('#message__input');
+                    const buttonSubmit = document.querySelector('#submit_button');
+                    const phoneInput = document.querySelector('#phone__input');
+
+                    var errorMessage = document.querySelector('#error');
+                    console.log(errorMessage)
+                    errorMessage.style.display = "none";
+
+                    buttonSubmit.addEventListener('click', (e)=> {
+                        e.preventDefault(); //to prevent submitting the form
+
+                        errorMessage.style.display = "none";
+
+                        //to check empty fields
+                        if(nameInput.value == '' || emailInput.value == '' || messageInput.value == '' || phoneInput.value == '')
+                        {
+                            errorMessage.innerText = 'Error:- please fill in the empty fields';
+                            errorMessage.style.display = "block";
+                            return submitForm(false);
+                        }
+
+                        
+                        //check phone number
+                        if(!validatePhone(phoneInput.value)) {
+                            errorMessage.innerText = 'Error:- please check your phone';
+                            errorMessage.style.display = "block";
+                            return submitForm(false);
+                        }
+
+                        //use regex to check email
+                        if(!validateEmail(emailInput.value))
+                        {
+                            errorMessage.innerText = 'Error:- please check your email';
+                            errorMessage.style.display = "block";
+                            return submitForm(false);
+                        }
+
+                        //message should be less than 100 words
+                        if(!validateMessage(messageInput.value))
+                        {
+                            errorMessage.innerText = 'Error:- please write a concise message having not more than 100 words';
+                            errorMessage.style.display = "block";
+                            return submitForm(false);
+                        }
+
+                        submitForm(true);
+                    });
+                </script>
+           </div>
+        </div> 
+       
+    </div>
+    

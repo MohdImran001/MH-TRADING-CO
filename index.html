@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="myApp">
     <head>
+	
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="eric-meyer-reset.min.css" type="text/css">
+	    <title> ITI TOOLS Supplier - Deals in all types of ITI Tools (Fitter, Electrician, Welder)</title>
+	        
+	    <link rel="stylesheet" href="./public/css/eric-meyer-reset.min.css" type="text/css">
         
         <!-- JQUERY -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
        
-        <link href="lightbox.min.css" rel="stylesheet"> <!-- LIGHTBOX -->
+        <!-- LIGHTBOX CSS-->
+        <link href="/public/css/lightbox.min.css" rel="stylesheet"> 
         
          <!-- Bootstrap js -->   
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -16,14 +20,15 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
        
         <!-- STYLE --> 
-        <link rel="stylesheet" href="style.css" type="text/css">
-        <link rel="stylesheet" href="smallscreen.css" type="text/css"> 
+        <link rel="stylesheet" href="./public/css/style.css" type="text/css">
+        <link rel="stylesheet" href="./public/css/smallscreen.css" type="text/css"> 
     
+        <!-- FONT -->
         <link href="https://fonts.googleapis.com/css?family=Raleway|Josefin+Sans" rel="stylesheet">
         
-      <!-- Start WOWSlider.com HEAD section -->
-        <link rel="stylesheet" type="text/css" href="engine1/style.css" />
-        <script type="text/javascript" src="engine1/jquery.js"></script>
+         <!-- Start WOWSlider.com HEAD section -->
+        <link rel="stylesheet" type="text/css" href="./public/engine1/style.css" />
+        <script type="text/javascript" src="./public/engine1/jquery.js"></script>
         <!-- End WOWSlider.com HEAD section -->
          
     </head>
@@ -56,35 +61,23 @@
         </div>
     </nav>
      
-    <div class="container-fluid" ng-view></div>
+    <div class="container-fluid" ng-view>
+        <!-- APP CONTENT GOES HERE --> 
+    </div>
     
    
-    <div id="footer"><p>&copy; 2017 (www.ititools.in) <span style="color:red">M.H. Trading Co.</span></p></div>
+    <div id="footer">
+        <p>
+            &copy; 2019 (www.ititools.co) 
+            <span style="color:red">M.H. Trading Co.</span>
+        </p>
+    </div>
     
-    
-    
-    
-    
-    
-    
-<script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyATlXPiFMX6vHddPknv7Lbmu2RtEV_qBcA",
-    authDomain: "mh-trading-co.firebaseapp.com",
-    databaseURL: "https://mh-trading-co.firebaseio.com",
-    storageBucket: "mh-trading-co.appspot.com",
-    messagingSenderId: "55873470843"
-  };
-  firebase.initializeApp(config);
-</script>
     <!-- ANGULAR & LIGHTBOX-->
-    <script src="lightbox.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-    <script src="angular-route.min.js"></script>
-    <script src="app.js"></script>
-    
+    <script src="./public/js/angular.min.js"></script>
+    <script src="./public/js/angular-route.min.js"></script>
+    <script src="./public/js/app.js"></script>
+    <script src="./public/js/lightbox.min.js"></script>
     
     
 </body>

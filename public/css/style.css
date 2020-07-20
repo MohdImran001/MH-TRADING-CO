@@ -92,34 +92,40 @@ body{
     max-width: 100%;
 }
 
-#signin {
-     box-shadow: 2px 2px 5px #eee;
+.error {
     color: red;
-    font-weight: bolder;
-    border: 2px solid #eee;
-    border-radius: 5px;
-    background: white;
+    font-family: inherit;
+    padding: 3px;
 }
 
-#message {
-    display: none;
+input, 
+textarea {
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    padding: 15px;
+    width: 100%;
+    margin-top: 6px;
 }
 
-#submit {
+textarea {
+    height: 200px;
+    resize: none;
+}
+
+#submit_button {
     box-shadow: 2px 2px 5px #eee;
-    color: red;
+    color: white;
     font-weight: bolder;
     border: 2px solid #eee;
     border-radius: 5px;
-    background: white;
+    background: red;
+    padding: 10px 15px 10px 15px;   
 }
 
-#signout {
-      box-shadow: 2px 2px 5px #eee;
-    color: red;
-    font-weight: bolder;
-    border: 2px solid #eee;
-    border-radius: 5px;
-    background: white;
-}
+
 
